@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  padding: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.person {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content {
+  margin-top: 32px;
+}
+.purpose {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.subTitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.list {
+  line-height: 2rem;
+}
+.para {
+  margin-bottom: 24px;
+}

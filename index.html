@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big cats classification</title>
+  </head>
+  <body>
+    <h1 class="title">Big Cats Classification</h1>
+    <div class="info">
+      <span class="person">Student: Hsu</span>
+      <span class="person">Instructor: Nyein Thiha Zaw</span>
+    </div>
+    <div class="content">
+      <p class="purpose">
+        This project aims to build an image classifier to identify different
+        species of big cats using a Convolutional Neural Network (CNN). The
+        model is trained, validated, and tested on a dataset containing images
+        of various big cats, which are organized into separate directories for
+        training, validation, and testing.
+      </p>
+      <div class="para">
+        <h3 class="subTitle">Dataset</h3>
+        <ul class="list">
+          <li>Training Set: Images used to train the model.</li>
+          <li>
+            Validation Set: Images used to validate the model during training.
+          </li>
+          <li>
+            Test Set: Images used to evaluate the model's performance after
+            training.
+          </li>
+        </ul>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Data Augmentation</h3>
+        <p class="list">
+          To improve the model's generalization capability, data augmentation
+          techniques are applied to the training images. This includes random
+          horizontal and vertical flipping and random rotation of the images.
+        </p>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Model Architecture</h3>
+        <p class="list">
+          The classifier is built using a custom CNN architecture, which
+          consists of the following layers:
+        </p>
+        <ul class="list">
+          <li>
+            Data Augmentation Layer: Applies random transformations to the input
+            images to create diverse training examples.
+          </li>
+          <li>
+            Convolutional Layers: Four convolutional layers with ReLU activation
+            to extract features from the input images. Each convolutional layer
+            is followed by a max-pooling layer to reduce the spatial dimensions
+            and retain the most important features.
+          </li>
+          <li>
+            Global Average Pooling Layer: Reduces the spatial dimensions of the
+            feature maps to a single vector.
+          </li>
+          <li>
+            Fully Connected Layer: A dense layer with 128 neurons and ReLU
+            activation to further process the extracted features.
+          </li>
+          <li>
+            Dropout Layer: A dropout layer with a dropout rate of 0.5 for
+            regularization to prevent overfitting.
+          </li>
+          <li>
+            Output Layer: A dense layer with 10 neurons and softmax activation
+            to classify the images into 10 different categories.
+          </li>
+        </ul>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Training</h3>
+        <p class="list">
+          The model is compiled with the Adam optimizer, sparse categorical
+          cross-entropy loss function, and accuracy as the evaluation metric. An
+          EarlyStopping callback is used to monitor the validation loss and stop
+          training when the model's performance stops improving, restoring the
+          best weights observed during training.
+        </p>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Evaluation</h3>
+        <p class="list">
+          After training, the model is evaluated on the test dataset to assess
+          its accuracy and loss. The trained model is then saved for future use.
+        </p>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Results</h3>
+        <p class="list">
+          The classifier is expected to accurately identify the species of big
+          cats in the test images based on the features learned during training.
+        </p>
+      </div>
+      <div class="para">
+        <h3 class="subTitle">Conclusion</h3>
+        <p class="list">
+          This project demonstrates how to build a robust image classifier using
+          a custom CNN architecture. The use of data augmentation and early
+          stopping helps in improving the model's performance and generalization
+          capability, making it a valuable tool for classifying images of big
+          cats.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
